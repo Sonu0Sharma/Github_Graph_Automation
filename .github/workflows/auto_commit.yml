@@ -1,0 +1,33 @@
+name: Auto Commit Text Changes
+
+on:
+  schedule:
+    - cron: '0 18 * * *'  # Runs daily at 6:00 PM UTC
+  workflow_dispatch:  # Allows you to run the workflow manually as well
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Run the auto-commit script
+        run: |
+          python auto_commit_script.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Sonu0Sharma"
+          git config --global user.email "sonusharmaxiisci@gmail.com"
+          git add random_text_changes.txt
+          git commit -m "Automated commit: $(date)"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
