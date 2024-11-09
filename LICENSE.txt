@@ -1,0 +1,7 @@
+Copyright [Year] [Your Name or GitHub Username]
+
+All Rights Reserved.
+
+This code is proprietary and is protected by copyright law. Unauthorized copying, use, modification, distribution, or commercial use of this code, without explicit written permission from the copyright owner, is strictly prohibited.
+
+For any permissions, please contact [Your Contact Information].
