@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository content
-        uses: actions/checkout@v3  # Updated to v3
+        uses: actions/checkout@v3  # Use the latest stable version
 
       - name: Set up Python
-        uses: actions/setup-python@v4  # Updated to v4
+        uses: actions/setup-python@v4  # Use the latest stable version
         with:
           python-version: '3.x'
 
@@ -23,11 +23,12 @@ jobs:
           python auto_commit_script.py
 
       - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "Sonu0Sharma"
           git config --global user.email "sonusharmaxiisci@gmail.com"
           git add random_text_changes.txt
           git commit -m "Automated commit: $(date)"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
