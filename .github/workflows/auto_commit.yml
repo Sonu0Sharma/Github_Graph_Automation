@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository content
-        uses: actions/checkout@v3  # Use the latest stable version
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v4  # Use the latest stable version
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
@@ -28,7 +28,6 @@ jobs:
         run: |
           git config --global user.name "Sonu0Sharma"
           git config --global user.email "sonusharmaxiisci@gmail.com"
-          git add random_text_changes.txt
-          git commit -m "Automated commit: $(date)"
+          git add random_text_changes.txt || exit 0  # Skip if no changes
+          git commit -m "Automated commit: $(date)" || exit 0  # Skip if no changes
           git push
-
