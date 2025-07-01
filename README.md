@@ -1,4 +1,7 @@
 # Github_Graph_Automation
+## Disclaimer -
+This Project is for educational purpose only !
+I have made this project to teach the automation process in Github in easiest way possible, So use this to learn not to cheat :)
 
 ## Overview
 
@@ -79,6 +82,7 @@ Follow these steps to create this project from scratch:
 ### 5. Ethical and Moral Use
 
 **Ethical Use Message**:  
+This Project is for educational purpose only !
 This project is intended to be used responsibly and ethically, aligning with values of integrity, transparency, and respect for privacy. All users and contributors should follow these guidelines:
 
 - **Respect Privacy**: Do not use this tool to gather unauthorized personal data. Ensure user consent and compliance with privacy regulations when applicable.
